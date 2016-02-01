@@ -16,6 +16,7 @@ public:
     void setLastName(const string lastName) { this->lastName = lastName;}
     void setFirstName(const string firstName){ this->firstName = firstName;}
     void setAge(const int age){ this->age=age;}
+    virtual void afficheInfos(){}
 
 protected:
     string lastName;
