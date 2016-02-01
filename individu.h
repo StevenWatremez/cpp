@@ -9,13 +9,13 @@ class Individu //définition du nom de la classe
 {
 public:
     Individu();
-    Individu(string lastName,string firstName,int age);
-    string getLastName(){ return this->lastName;}
-    string getFirstName(){ return this->firstName;}
-    int getAge(){ return this->age;}
-    void setLastName(string lastName) { this->lastName = lastName;}
-    void setFirstName(string firstName){ this->firstName = firstName;}
-    void setAge(int age){ this->age=age;}
+    Individu(const string lastName, const string firstName, const int age);
+    const string getLastName() const { return this->lastName;}
+    const string getFirstName()const { return this->firstName;}
+    const int getAge() const { return this->age;}
+    void setLastName(const string lastName) { this->lastName = lastName;}
+    void setFirstName(const string firstName){ this->firstName = firstName;}
+    void setAge(const int age){ this->age=age;}
 
 protected:
     string lastName;
