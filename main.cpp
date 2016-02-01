@@ -7,12 +7,14 @@ using namespace std;
 void exerciseIndividu();
 void exerciseEtudiant();
 void exerciseEtudiantPoly();
+void pointerExercise();
 
 int main(int argc, char *argv[])
 {
     //exerciseIndividu();
     //exerciseEtudiant();
-    exerciseEtudiantPoly();
+    //exerciseEtudiantPoly();
+    pointerExercise();
 
     return 0;
 }
@@ -57,4 +59,28 @@ void exerciseEtudiantPoly() {
     Individu * etudiant = new Etudiant("Roger", "Watremez", 24);
 
     etudiant->afficheInfos();
+}
+
+void pointerExercise(){
+    // #1
+    Individu * individu = new Individu("Steven", "Watremez", 24);
+    Individu * petitNouveau = individu;
+
+    petitNouveau->setAge(100);
+    petitNouveau->setFirstName("Roger");
+    petitNouveau->setLastName("Roger");
+
+    // the reference about the invidu change when you change petitNouveau
+    std::cout << "Individu individu : " << individu->getLastName() << " " << individu->getFirstName() << " a " << individu->getAge() << " ans" << std::endl;
+
+    // #2 It not now a pointer
+    Individu petitpetitNouveau = *individu;
+
+    // you use so the . to access to the method
+    std::cout << "Individu individu : " << petitpetitNouveau.getLastName() << " " << petitpetitNouveau.getFirstName() << " a " << petitpetitNouveau.getAge() << " ans" << std::endl;
+
+    // #3
+    Individu is1("Chuck","Norris",53);
+
+    Individu * is2 = &is1;
 }
