@@ -6,6 +6,7 @@ class Etudiant : public Individu
 {
 public:
     Etudiant(const string lastName, const string firstName, const int age);
+    Etudiant(const Etudiant & e);
     void setEtudiantFormation(int year, string yearFormation);
     void afficheFormation();
     void afficheInfos();

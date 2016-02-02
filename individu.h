@@ -13,10 +13,14 @@ public:
     const string getLastName() const { return this->lastName;}
     const string getFirstName()const { return this->firstName;}
     const int getAge() const { return this->age;}
-    void setLastName(const string lastName) { this->lastName = lastName;}
+    //void setLastName(string lastName) { this->lastName = lastName;}
+    //void setLastName(string * lastName) { this->lastName = *lastName;}
+    void setLastName(const string & lastName) { this->lastName = lastName;}
     void setFirstName(const string firstName){ this->firstName = firstName;}
     void setAge(const int age){ this->age=age;}
     virtual void afficheInfos(){}
+
+    bool operator< (const Individu & individu) const;
 
 protected:
     string lastName;

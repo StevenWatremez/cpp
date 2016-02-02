@@ -1,6 +1,11 @@
 #include "etudiant.h"
 
 Etudiant::Etudiant(const string lastName, const string firstName, const int age) : Individu(lastName, firstName, age) {}
+Etudiant::Etudiant(const Etudiant & e) {
+    this->lastName = e.lastName;
+    this->firstName = e.firstName;
+    this->age = e.age;
+}
 
 void Etudiant::setEtudiantFormation(int year, string yearFormation){
     if ((year - 1 > -1) && (year - 1 < 5)) {
